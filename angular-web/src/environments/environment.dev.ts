@@ -8,6 +8,6 @@ export const environment = {
   graph: {
     clientId: '', //TODO: crear nueva app en el portal de Azure (https://portal.azure.com)
     scopes: ['user.read', 'openid', 'profile'],
-    redirectUri: 'https://localhost:4200'
+    redirectUri: 'https://localhost:4200' //TODO: url de la web app
   }
 };

@@ -21,7 +21,11 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@auth0/angular-jwt": "^5.0.2",
+    "@azure/msal-angular": "^2.1.0",
+    "@azure/msal-browser": "^2.21.0",
     "@compodoc/compodoc": "^1.1.18",
+    "@microsoft/microsoft-graph-client": "^3.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
