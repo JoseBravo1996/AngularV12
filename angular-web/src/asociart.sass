@@ -1,0 +1,547 @@
+@import '~@sc/portal.fe.lib.global-styles/src/globals'
+@import '~@sc/portal.fe.lib.global-styles/src/base'
+
+// Colors 
+$legacy-color: #424F66
+$sidebar-color: #EE2737
+$primary-color: #C60C30
+$disabled-color: #AEB7C8
+$secondary-color-gray: #C6BC89
+$secondary-color-coolgray: #747678
+$secondary-color-orange: #D52B1E
+$terciary-color-agro: #007934
+$terciary-color-education: #589199
+$terciary-color-olivicola: #878800
+$terciary-color-bodegas: #966D5B
+$terciary-color-frutasfinas: #BF2296
+$terciary-color-informatica: #5C7F92
+$terciary-color-comercio: #003478
+$terciary-color-hotelesyrestaurant: #DD4814
+$terciary-color-taxisyremises: #0098DB
+$terciary-color-pymes: #7C109A
+$terciary-color-industrialiviana: #6AADE4
+$terciary-color-capacitaciones: #005172
+$title-size: 14px
+$subtitle-size: 12px
+$color-lightgray: #AAA
+
+@font-face
+  font-family: Lato
+  src: local('Lato Thin'), local('Lato-Thin'), url('./assets/fonts/Lato-Thin.ttf')
+  font-weight: 100
+  font-style: normal
+
+@font-face
+  font-family: Lato
+  src: local('Lato Thin Italic'), local('Lato-ThinItalic'), url('./assets/fonts/Lato-ThinItalic.ttf')
+  font-weight: 100
+  font-style: italic
+
+@font-face
+  font-family: Lato
+  src: local('Lato Light'), local('Lato-Light'), url('./assets/fonts/Lato-Light.ttf')
+  font-weight: 300
+  font-style: normal
+
+@font-face
+  font-family: Lato
+  src: local('Lato Light Italic'), local('Lato-LightItalic'), url('./assets/fonts/Lato-LightItalic.ttf')
+  font-weight: 300
+  font-style: italic
+
+@font-face
+  font-family: Lato
+  src: local('Lato Regular'), local('Lato-Regular'), url('./assets/fonts/Lato-Regular.ttf')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: Lato
+  src: local('Lato Italic'), local('Lato-Italic'), url('./assets/fonts/Lato-Italic.ttf')
+  font-weight: 400
+  font-style: italic
+
+@font-face
+  font-family: Lato
+  src: local('Lato Bold'), local('Lato-Bold'), url('./assets/fonts/Lato-Bold.ttf')
+  font-weight: 700
+  font-style: normal
+
+@font-face
+  font-family: Lato
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url('./assets/fonts/Lato-BoldItalic.ttf')
+  font-weight: 700
+  font-style: italic
+
+@font-face
+  font-family: Lato
+  src: local('Lato Black'), local('Lato-Black'), url('./assets/fonts/Lato-Black.ttf')
+  font-weight: 900
+  font-style: normal
+
+@font-face
+  font-family: Lato
+  src: local('Lato Black Italic'), local('Lato-BlackItalic'), url('./assets/fonts/Lato-BlackItalic.ttf')
+  font-weight: 900
+  font-style: italic
+
+$typography: 'Lato', sans-serif!important
+
+body, input[type=text], input[type=number], input[type=email], input[type=password], select, textarea, label
+  font-family: $typography
+
+::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder, :-moz-placeholder
+  font-family: $typography
+
+a
+  &:hover, &:focus, &:active 
+    color: $primary-color !important
+
+span, p, label
+  font-family: $typography
+
+.sc-color-primary-brand
+  color: $primary-color
+
+.sc-button
+    height: 28px
+    margin-right: 8px
+    margin-bottom: 8px
+    font-size: $title-size
+    transition: ease .3s
+    @media screen and (max-width: 768px)
+      margin-right: 0
+.sc-button--primary
+  background-color: $primary-color
+  &:hover, &:focus, &:focus-within
+    background-color: #d13c59
+  &:active
+    background-color: #9e0926
+  &.sc-button--loading
+    background: $primary-color
+.sc-button--secondary
+  border: thin solid $primary-color !important
+  color: $primary-color
+  &:hover, &:focus, &:focus-within
+    background-color: $primary-color
+  &:active
+    background-color: #9e0926
+  &:disabled
+    background: transparent
+    border: thin solid $disabled-color !important
+  &.sc-button--loading
+    background: transparent
+    color: $primary-color
+.sc-button--tertiary
+  &:hover, &:focus, &:focus-within
+    color: $primary-color
+  &.sc-button--loading
+    background: transparent
+    color: #fff
+.sc-button--link
+  color: $primary-color
+  height: 40px
+  padding: 1px 16px
+  &:hover, &:focus, &:focus-within
+    color: #d13c59
+    background-color: #eaeaea
+  &:active
+    color: #9e0926
+    background-color: #eaeaea
+.sc-button--secondary:focus
+    border: thin solid #C60C30 !important
+    color: #C60C30
+    background: transparent
+
+.sc-date-picker 
+  .sc-icon--disabled
+    color: $secondary-color-gray !important
+  .disabled
+    .sc-icon--disabled
+      color: $secondary-color-coolgray !important
+bs-datepicker-container
+  div
+    &.bs-datepicker-container
+      padding: 0
+    &.bs-datepicker-head
+      background-color: $primary-color !important
+    &.bs-datepicker-body
+      span[bsdatepickerdaydecorator].selected
+        background-color: $secondary-color-gray !important 
+
+.navbar__aside
+  background-color: $sidebar-color !important
+.navbar__header-mobile
+  background-color: $sidebar-color !important
+
+td .timeline-item
+  border-left: 16px solid #fff
+sc-action-menu
+  top: -15px!important
+  z-index: 1 !important
+sc-context-menu
+  left: calc(100% - 45px)
+.sc-action-menu__list-item-link
+  &:hover, &:focus, &:active
+    color: #000 !important
+
+sc-search-field 
+  .input-group.search-field
+    border: 2px solid $primary-color !important
+  button.sc-button
+    margin: 0
+    color: #fff
+    background-image: url(/assets/images/magnifier.svg) !important
+    background-repeat: no-repeat !important
+    background-position: center !important
+    outline: $primary-color !important
+    img
+      display: none
+
+.sc-icon:before
+  position: relative
+  top: 1px
+
+.sc__tab
+  &.sc__tab-button
+    color: $secondary-color-coolgray !important
+  &.sc__tab--selected
+    button
+      color: #000 !important
+  &::after
+    background-color: $primary-color !important
+
+.sc-select:not(.sc-select--disabled):not(.sc-select--readonly)
+  .arrow-down-dropdown-blue, .arrow-up-dropdown-blue
+    color: $secondary-color-gray !important
+.sc-select
+  .sc-select__scroll.sc-select__item
+    font-size: 11px!important
+    line-height: 1!important
+  .sc-select__items
+    .sc-select__item:hover
+      background-color: #f0eddf !important
+      color: #000 !important
+    .sc-select__item--selected
+      background-color: $secondary-color-gray !important
+
+.sc-checkbox__square--checked:not(.sc-checkbox__square--read-only)
+  &::after
+    border: 2px solid $secondary-color-gray !important
+    background-color: $secondary-color-gray !important
+
+.sc-modal__close:not(:disabled)
+  color: $primary-color !important
+
+.sc-input__input-group--prefix
+    /* line-height: 2.1; */
+    padding-right: 4px !important
+    padding-left: 4px !important
+    padding-bottom: 0px !important
+    line-height: normal !important
+
+.sc-input__input-group
+  input:focus
+    border-color: $secondary-color-gray !important
+input:focus
+  border-color: $secondary-color-gray !important
+
+.sc-textarea__native-textarea
+  font-family: $typography !important
+  &:focus
+    border-color: $secondary-color-gray !important
+.floating-label .label--focus
+  color: $secondary-color-gray !important
+
+.sc-stepper__list-item
+  &.current
+    border-left-color: $secondary-color-gray !important
+  &.final.current
+    .sc-stepper__list-item-status-icon
+      color: #fff !important
+    &.current
+      background-color: $secondary-color-gray !important
+.sc-stepper__list-item-status-icon
+  color: $secondary-color-gray !important
+
+.sc-table--selectable .sc-table__body-row:hover
+  background-color: #fbf3f4 !important
+  transition: ease .2s
+
+.sc-uploader__thumbnail-container .sc-uploader__image-detail,
+.sc-uploader__thumbnail-loading-icon,
+.sc-uploader__list-container .sc-uploader__item-right
+  color: $primary-color !important
+.sc-radio-item__circle-outer--checked,
+.sc-upload-button
+  color: $secondary-color-coolgray !important
+.sc-upload-button
+  padding: 0px 16px
+  line-height: 0px
+.sc-radio-item__circle-inner--checked
+  border-color: $secondary-color-coolgray !important
+.sc-uploader__list-container .sc-uploader__item--document .sc-uploader__item-left
+  background-color: $secondary-color-coolgray !important
+.sc-uploader_status_valid
+  border-color: $secondary-color-coolgray !important
+.sc-uploader__header
+  .header-box__button
+    line-height: 36px
+    margin-left: 12px
+
+.sc-box
+  background-color: #f0eddf !important
+  .sc-box__icon
+    color: $secondary-color-gray !important
+  a
+    color: $primary-color !important
+
+h1, h2, h3
+  font-weight: 900
+h2
+  font-size: 1.5rem
+h3
+  font-size: 1.25rem
+  font-family: $typography
+
+.sc-input__label
+  font-weight: bold
+  font-size: $title-size
+
+.sc-list__main__table__header-cell
+  color: #424f66 !important
+  font-size: 0.825rem !important
+  line-height: 1rem !important
+  font-weight: 700 !important
+  text-transform: capitalize !important
+
+sc-grid
+  overflow-x: auto
+  padding-top: 10px
+  padding-bottom: 50px
+  &::-webkit-scrollbar
+    height: 5px
+  &::-webkit-scrollbar-thumb
+    background: $color-lightgray
+  table.sc-grid__table
+    display: table
+    tr.sc-grid__table__row
+        height: 56px !important
+        &:nth-child(even)
+             background-color: #FFFFFF
+        &:nth-child(odd)
+             background-color: #FFFFFF
+        td
+            // color: $secondary-color-coolgray
+        .cell__primary-text
+            font-weight: 400!important
+        td.sc-grid__table-cell
+            padding: 0px 5px!important
+        td.sc-grid__column--Priority
+            text-align: center !important
+        td.sc-grid__column--RecoverId
+            text-align: center !important
+        td.sc-grid__column--RecoverReason
+            text-align: center !important
+        td.sc-grid__column--Status
+            text-align: center !important
+        td.sc-grid__column--ClaimNumber
+            text-align: center !important
+        td.sc-grid__column--AccidentDate
+            text-align: center !important
+        td.sc-grid__column--ClaimStatus
+            text-align: center !important
+        td.sc-grid__column--ClaimTrial
+            text-align: right !important                                
+    tr.sc-grid__table__row-header
+        line-height: 1.3
+        // background-color: #FFFFFF !important
+        th
+            font-size: 11px !important
+            transform: scaleY(1.1)
+            font-weight: 900 !important
+            padding: 0px 5px!important
+            text-align: center !important
+            // vertical-align: baseline !important
+            sc-icon
+                span:before
+                    line-height: 0
+                    font-size: 10px
+                    position: relative
+                    top: -2px
+                    margin: 0 !important
+        
+              
+sc-grid.offeringTable
+  div.sc-grid__md
+    overflow: hidden !important      
+  
+.lateral-drawer.lateral-drawer_open
+  h1, h2, h3, h4, h5, h6
+    font-family: inherit !important
+
+input[type=text], input[type=number], input[type=email], input[type=password], select 
+    width: 100%
+    height: 28px
+    font-family: $typography !important
+    vertical-align: middle !important
+
+.sc-input__input-group__control
+    font-size: $subtitle-size !important
+    vertical-align: middle !important
+
+.sc-input
+    &__icon
+      padding: .1rem 0.4rem 1rem 0 !important
+
+label
+    margin-bottom: 4px !important
+
+.sc-select--with-label
+   .sc-select__items
+     &__down
+       top: 46px !important
+
+div.pagination
+  align-items: baseline
+
+div.page-text-items-page
+  color: #424F66 !important
+
+div.page-text
+  color:  #424F66 !important
+
+.filter-button-mobile--icon
+  color: $primary-color !important
+
+
+.viewLateral
+  sc-lateral-drawer
+      div.lateral-drawer
+         width: 540px !important
+
+div.dashboard-chars
+  text
+    font-size: 12px !important
+
+.card_style
+   div.card-header
+      padding: 0px
+      margin: 0px
+      background-color:#fff
+   div.card-body
+     padding: 0px
+     padding-left: 5px
+     padding-top:5px
+
+.aso-accordion-group .card .card-header 
+  padding: 1.3rem 2rem 0.2rem
+
+.sc-table__head-row
+  background-color: transparent !important
+
+.payment-numeric input
+  text-align: right
+
+.main-title
+  .section-title
+    .subtitle
+      font-family: $typography
+
+ul li
+  line-height: 1.3
+  button
+    font-family: $typography
+
+      
+div.row .comment 
+  small
+    color: $primary-color!important
+  p
+    font-size: 0.9rem
+
+.form-group 
+  label
+    font-weight: Bold
+  p
+    font-size: 12px
+    line-height: 1.2
+
+a 
+  color: inherit
+  text-decoration: inherit
+  &:hover, &:active, &:focus
+    color: $primary-color !important
+    text-decoration: inherit!important
+
+.cell__primary-text
+  line-height: 1.3
+
+.sc-form-control-error
+    width: max-content !important
+
+.tag-list-container
+    background-color: transparent !important
+
+.sc-title-step2
+    font-size: 16px !important
+    font-weight: 700 !important
+
+.tag-list-container--tag
+    padding: 1px 16px !important
+    font-family: Roboto,"Open Sans",sans-serif !important
+    align-items: center !important
+    display: flex !important
+    flex-wrap: wrap !important
+    background-color: #6666 !important
+    min-height: 40px !important
+    font-size: .8rem !important
+
+.btn-primary
+   background-color: #d9534f !important
+   border-color: #d43f3a !important
+
+.btn-primary:hover 
+    background-color: $primary-color !important
+    border-color: $primary-color !important
+  
+.btn.disabled, .btn[disabled], fieldset[disabled] 
+  cursor: not-allowed !important
+  filter: alpha(opacity=65) !important
+  opacity: .65 !important
+  -webkit-box-shadow: none !important
+  box-shadow: none !important
+
+.sc-scroll-bar::-webkit-scrollbar-thumb
+  background-color: $secondary-color-gray !important
+
+@media screen and (min-width: 769px)
+  #loading
+    width: calc((100% - 4rem))!important
+    right: 0!important
+    left: inherit!important
+
+#grid-header-RecoverReason, #grid-header-Instance, #grid-header-ClaimNumber, #grid-header-ClaimStatus, #grid-header-EmployeeFullName, #grid-header-EmployeeFullName, sc-grid table.sc-grid__table tr.sc-grid__table__row td.sc-grid__column--RecoverReason, sc-grid table.sc-grid__table tr.sc-grid__table__row, sc-grid table.sc-grid__table tr.sc-grid__table__row td.sc-grid__column--ClaimStatus, .cell__primary-text div.trial-item
+  text-align: left!important
+
+#grid-header-ClaimAmount
+  text-align: right!important
+
+#grid-header-ClaimTrial, .cell__primary-text div.trial-item, #grid-header-ClaimNumber, td.sc-grid__column--ClaimNumber
+  text-align: center!important
+
+#recovers-grid 
+  padding-right: 0
+  padding-left: 0
+
+.sc-list__main__table__cell
+  color: $secondary-color-coolgray!important
+
+
+.sc-radio-item__circle
+  height: 20px!important
+  width: 20px!important
+  top: -3.5px!important      
+
+.card-header 
+    border-bottom: 0px solid rgba(0,0,0,.125)

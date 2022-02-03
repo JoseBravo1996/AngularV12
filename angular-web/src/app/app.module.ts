@@ -8,10 +8,14 @@ import { CoreModule } from '@core/core.module';
 import { DataModule } from '@data/data.module';
 import { ModulesModule } from '@modules/modules.module';
 import { SharedModule } from '@shared/shared.module';
+import { ButtonModule, NavbarModule } from '@asociart/portal.fe.lib.ui-core-components';
+import { FullLayoutComponent } from './layout/full-layout/full-layout.component';
+import { IconModule } from '@sc/portal.fe.lib.ui-core-components';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FullLayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +23,11 @@ import { SharedModule } from '@shared/shared.module';
     CoreModule,
     DataModule,
     ModulesModule,
-    SharedModule
+    SharedModule,
+    ButtonModule,
+    ButtonModule,
+    NavbarModule,
+    IconModule
   ],
   providers: [
     {

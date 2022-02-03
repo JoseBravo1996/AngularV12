@@ -1,0 +1,13 @@
+<div id="loading" *ngIf="loading">
+    <sc-icon id="loading-image" icon="loading" size="2"></sc-icon>
+</div>
+<div class="full-layout-container">
+    <div class="menu-bar">
+        <sc-navbar logo="/assets/images/logotipo-aso-blanco.png" mobileLogo="/assets/images/logotipo-aso-blanco.png"
+            [mainMenu]="menu" [panelOptions]="panelOptions" (isMobileMenuOpen)="onMenuToggle($event)">
+        </sc-navbar>
+    </div>
+    <main class="section-content gutters sc-scroll-bar">
+        <router-outlet></router-outlet>
+    </main>
+</div>
